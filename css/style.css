@@ -1,15 +1,22 @@
 /* Eric Meyer Reset */
+
 @import url('reset.css');
 
+/* My awesome components */
+
+@import url('components/buttons.css');
+
 /* Variables */
+
 :root {
-    --primary-color:       #fa573a;
-    --menu-grey:           #666666;
-
-    --background-color:     #21242e;
-
-    --margin-right-header:    10px;
+    --secondary-typo: 'Handlee', cursive;
+    --primary-color: #fa573a;
+    --menu-grey: #666666;
+    --light-grey: #cccccc;
+    --background-color: #21242e;
+    --margin-right-header: 10px;
 }
+
 
 /* 
 
@@ -18,8 +25,8 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Handlee', cursive;
 
 */
-@import url('https://fonts.googleapis.com/css?family=Handlee|Montserrat:400,700&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Handlee|Montserrat:400,700&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -38,7 +45,9 @@ img {
     height: auto;
 }
 
+
 /* Containers */
+
 .container-fluid {
     width: 100%;
 }
@@ -55,7 +64,9 @@ img {
     clear: both;
 }
 
+
 /* ! Header ! */
+
 header .submenu {
     background-color: var(--background-color);
     color: white;
@@ -72,11 +83,13 @@ header .submenu .row div {
     width: 25%;
 }
 
-header .submenu .row div:nth-child(1), header .submenu .row div:nth-child(2) {
+header .submenu .row div:nth-child(1),
+header .submenu .row div:nth-child(2) {
     text-align: left;
 }
 
-header .submenu .row div:nth-child(3), header .submenu .row div:nth-child(4) {
+header .submenu .row div:nth-child(3),
+header .submenu .row div:nth-child(4) {
     text-align: right;
 }
 
@@ -140,46 +153,105 @@ header .hamburguesa {
     background-color: var(--background-color);
 }
 
-.hero > div {
+.hero>div {
     padding: 10% 10%;
 }
 
-.hero h1, .hero h2, .hero p, .hero a {
+.hero h1,
+.hero h2,
+.hero p,
+.hero a {
     color: white;
 }
 
-.hero > div h1 {
-    font-size:  2em;
-    font-family: 'Handlee', cursive;
+.hero>div h1 {
+    font-size: 2em;
+    font-family: var(--secondary-typo);
 }
 
-.hero > div h2 {
+.hero>div h2 {
     margin: .8em 0;
     font-size: 1.25em;
     color: var(--primary-color);
 }
 
-.hero .btn {
-    display: inline-block;
-    padding: .9em;
-    background-color: var(--primary-color);
-    margin: .8em 0;
-    border: 2px solid var(--primary-color);
-    text-shadow: 1px 1px 1px black;
-}
-
-.hero .btn:hover {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-}
-
 .hero .social {
     display: flex;
 }
+
 .hero .social li {
     font-size: 1.5em;
     margin-right: .7em;
 }
+
+
+/*  ¡ Start Main ! */
+
+section {
+    padding: 50px 0;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--secondary-typo);
+    font-size: 2em;
+    text-align: center;
+    font-weight: 700;
+}
+
+main section h2 span {
+    color: var(--primary-color);
+}
+
+main section .underline {
+    margin: 0 auto;
+    height: 10px;
+    width: 100px;
+    position: relative;
+}
+
+main section .underline hr {
+    position: absolite;
+    top: 50%;
+    left: 0%;
+    transform: translateY(150%);
+    border: 1px solid var(--primary-color);
+}
+
+main section .underline span {
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+main section .flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section .flex article {
+    border-left: 1px solid var(--light-grey);
+    padding: 0 25px;
+    margin: 25px 0;
+    width: 33%;
+}
+
+main #ourservices article h3 {
+    font-weight: 700;
+    margin: 15px 0;
+    font-size: 120%;
+}
+
+main #ourservices article p {
+    color: var(--menu-grey);
+}
+
+/*  ¡ End Main ! */
+
 
 /* 48em = 768px */
 @media(max-width: 48em) {
@@ -189,18 +261,33 @@ header .hamburguesa {
         font-size: 80%;
     }
 
-    header .submenu .row div:nth-child(1), header .submenu .row div:nth-child(2) {
-        text-align: center;
-    }
-    
-    header .submenu .row div:nth-child(3), header .submenu .row div:nth-child(4) {
+    header .submenu .row div:nth-child(1),
+    header .submenu .row div:nth-child(2) {
         text-align: center;
     }
 
+    header .submenu .row div:nth-child(3),
+    header .submenu .row div:nth-child(4) {
+        text-align: center;
+    }
+
+    main section .flex article {
+        width: 50%;
+    }
+
+    main section .flex article:last-child {
+        width: 100%;
+    }
+
+    main section .flex article:first-child, main section .flex article:last-child {
+        border-left: 0px;
+    }
 }
+
 
 /* 37.5em = 600px */
 @media(max-width: 37.5em) {
+    
     header .submenu .row div a span {
         display: none;
     }
@@ -247,5 +334,14 @@ header .hamburguesa {
     .hero {
         height: 60vh;
     }
+
+    main section .flex article {
+        width: 100%;
+        border-left: 0px solid transparent;
+        border-bottom: 1px solid var(--light-grey);
+        padding-bottom: 20px;
+    }
+
 }
-/* ¡ End Header !*/
+
+/* ¡ End Header ! */

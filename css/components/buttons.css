@@ -1,0 +1,44 @@
+.btn {
+    display: inline-block;
+    padding: .9em;
+    background-color: var(--primary-color);
+    margin: .8em 0;
+    border: 2px solid var(--primary-color);
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-default {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-default:hover {
+    text-shadow: 2px 2px 2px black;
+}
+
+.btn-link {
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 0;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0px solid transparent;
+}
+
+.btn-link:hover {
+    border: 0px solid transparent;
+}
+
+.btn-link i {
+    transition: .5s;
+}
+
+.btn-link:hover i {
+    margin-left: 5px;
+}
