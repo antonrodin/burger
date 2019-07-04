@@ -184,7 +184,6 @@ header .hamburguesa {
     margin-right: .7em;
 }
 
-
 /*  ¡ Start Main ! */
 
 section {
@@ -250,9 +249,55 @@ main #ourservices article p {
     color: var(--menu-grey);
 }
 
+main #aboutus .flex .col {
+    padding: 0 25px;
+    margin: 25px 0;
+    width: 50%;
+}
+
+main #aboutus .img .caption {
+    display: block;
+    border: 3px solid var(--primary-color);
+    transform: rotate(10deg);
+    transition: 1s;
+}
+
+main #aboutus .img .caption:hover {
+    transform: rotate(0deg);
+}
+
+main #aboutus .img img {
+    transform: rotate(-10deg);
+    display: block;
+    transition: 1s; 
+}
+
+main #aboutus .img img:hover {
+    box-shadow: 3px 3px 10px black;
+    transform: rotate(0deg);
+    transform: scale(1.05, 1.05);
+}
+
+main #aboutus h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+main #aboutus h4 {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+main #aboutus p {
+    color: var(--menu-grey);
+    margin-top: 10px;
+}
+
 /*  ¡ End Main ! */
 
-/*  */
+/* 1100px = 68.75em */
 @media(max-width: 68.75em) {
     .hero>div {
         padding: 10% 20px;
@@ -347,6 +392,10 @@ main #ourservices article p {
         border-left: 0px solid transparent;
         border-bottom: 1px solid var(--light-grey);
         padding-bottom: 20px;
+    }
+
+    main #aboutus .flex .col {
+        width: 100%;
     }
 
 }
