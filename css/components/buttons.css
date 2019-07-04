@@ -13,13 +13,24 @@
     border: 2px solid var(--primary-color);
 }
 
-.btn-default {
+.btn-transparent {
     background-color: transparent;
     color: var(--primary-color);
 }
 
-.btn-default:hover {
+.btn-transparent:hover {
     text-shadow: 2px 2px 2px black;
+}
+
+.btn-default {
+    background-color: var(--primary-color);
+    text-shadow: 2px 2px 2px black;
+    color: white;
+}
+
+.btn-default:hover {
+    color: black;
+    text-shadow: 2px 2px 2px transparent;
 }
 
 .btn-link {
