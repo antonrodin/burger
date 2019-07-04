@@ -154,7 +154,7 @@ header .hamburguesa {
 }
 
 .hero>div {
-    padding: 10% 10%;
+    padding: 10% 0;
 }
 
 .hero h1,
@@ -252,6 +252,12 @@ main #ourservices article p {
 
 /*  ¡ End Main ! */
 
+/*  */
+@media(max-width: 68.75em) {
+    .hero>div {
+        padding: 10% 20px;
+    }
+}
 
 /* 48em = 768px */
 @media(max-width: 48em) {
@@ -325,6 +331,7 @@ main #ourservices article p {
         display: block;
         text-align: center;
         padding: 20px;
+        margin-left: 0px;
     }
 
     header nav .menu li:not(:last-child) {
